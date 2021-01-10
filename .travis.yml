@@ -1,0 +1,23 @@
+# Basically this file will configure the 
+#the travis ci. We first create a python serv to 
+#to run the tests. Then we specify which services 
+#we are going to use. Here we use the docker service.
+#Then we want to download the docker-compose that is 
+#resposible for running the docker image that we created.
+
+#Here we add the language that we are using for the project
+language: python
+python: 
+  - "3.9.0"
+
+#Here we want to specify the service that we are going to use
+services:
+  - docker
+
+#Before we start the running the main script we want install the docker-compose on the python server
+before_script: pip install docker-compose
+
+#Now run run the docker image in the python server
+#that we created.
+script:
+  - docker-compose run app sh -c "python manage.py test && flake8"
