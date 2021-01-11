@@ -20,4 +20,4 @@ before_script: pip install docker-compose
 #Now run run the docker image in the python server
 #that we created.
 script:
-  - docker-compose run app sh -c "python manage.py test"
+  - docker-compose run app sh -c "python manage.py test && flake8"
