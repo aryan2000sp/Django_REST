@@ -8,7 +8,7 @@
 #Here we add the language that we are using for the project
 language: python
 python: 
-  - "3.9.0"
+  - "3.6"
 
 #Here we want to specify the service that we are going to use
 services:
