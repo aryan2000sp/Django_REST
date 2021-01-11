@@ -2,7 +2,7 @@
 message=""
 for i in "$@"
 do
-	message="${i} ${message}"
+	message="${message} ${i}"
 done
 
 git add .
