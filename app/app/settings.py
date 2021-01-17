@@ -120,4 +120,8 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
+"""
+We add this since we had
+a custom user model for user.
+"""
 AUTH_USER_MODEL = "core.User"
